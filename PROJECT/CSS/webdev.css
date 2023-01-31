@@ -1,0 +1,95 @@
+div img {
+    width: 100%;
+    height: 450px;
+    background: cover;
+    border-radius: 1rem;
+}
+
+div h1,
+h2,
+h3 {
+    font-family: var(--font1);
+}
+
+div p {
+    font-family: var(--font2);
+}
+
+.webdev {
+    background-color: rgb(248, 247, 246);
+    display: flex;
+    flex-direction: column;
+}
+
+.webdev-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.webdev-para {
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.webdev_2 {
+    background-color: rgb(248, 247, 246);
+    display: flex;
+    flex-direction: column;
+}
+
+.webdev-head_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.webdev-para_2 {
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.webdev_3 {
+    background-color: rgb(248, 247, 246);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.webdev-head_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.webdev_list_3 ol li {
+    margin: 24px auto;
+    font-weight: bold;
+}
+
+.webdev_4 {
+    background-color: rgb(248, 247, 246);
+}
+
+.webdev_4 p {
+    margin: 24px 8px;
+    font-size: 1.3rem;
+}
+
+.webdev_4 ul li {
+    margin: 24px 24px;
+    font-size: 1.3rem;
+    font-family: var(--font2);
+}

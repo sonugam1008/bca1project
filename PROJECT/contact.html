@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT PAGE</title>
+    <link rel="stylesheet" href="CSS/utils.css">
+    <link rel="stylesheet" href="CSS/style2.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+
+    <style>
+        .form-box span {
+            visibility: hidden;
+            margin: 0 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="row font1">
+                <div class="col-md-4">
+                    <h1 id="logo">NJ</h1>
+                </div>
+                <div class="col-md-8">
+                    <ul id="menu" class="float-md-right">
+                        <li><a href="PROJECT1.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form action="" name="f1">
+        <div class="contact-content font1 max-width-1 m-auto">
+            <h2>Feel Free to Contact Us</h2>
+            <div class="contact-form">
+
+                <div class="form-box">
+                    <input type="text" id="fname" name="t1" placeholder="Enter Your Name"><span id="name"><b>Invalid
+                            Name</b></span>
+                </div>
+
+                <div class="form-box">
+                    <input type="text" id="fnumber" name="p1" placeholder="Enter Your Phone Number"><span
+                        id="number"><b>Invalid
+                            Number</b></span>
+                </div>
+
+                <div class="form-box">
+                    <input type="email" name="e1" placeholder="Enter Your Email Id" id="femail"><span
+                        id="email"><b>Invalid
+                            email</b></span>
+                </div>
+
+                <div class="form-box">
+                    <textarea name="ta1" id="" cols="30" rows="10" placeholder="How may we help you?"></textarea>
+                </div>
+
+                <div class="form-box" id="resub">
+                    <input type="reset" value="Reset" class="btn">
+                    <input type="button" value="Submit " class="btn" onclick="display()">
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+
+    <script src="JS/jquery.js"></script>
+    <script>
+        function display() {
+            let name = f1.t1.value;
+            let number = f1.p1.value;
+            let email = f1.e1.value;
+            let textarea = f1.ta1.value;
+            let count = 0;
+
+            if (name.length == 0) {
+                alert(" Enter valid Name");
+                document.getElementById('name').style.visibility = "visible";
+                document.getElementById('name').style.color = "red";
+                $(document).ready(function () {
+                    $("#fname").click(function () {
+                        $("#name").hide();
+                    });
+                });
+                count++;
+            }
+
+            if (textarea.length == 0) {
+                alert("Enter any text");
+                count++;
+            }
+
+            if (number.length != 10 || number.length == 0) {
+                alert("Enter 0 to 9 any 10 numbers only");
+                document.getElementById('number').style.visibility = "visible";
+                document.getElementById('number').style.color = "red";
+                $(document).ready(function () {
+                    $("#fnumber").click(function () {
+                        $("#number").hide();
+                    });
+                });
+                count++;
+            }
+
+            if (email.indexOf('@') != email.lastIndexOf('@') || (email.indexOf('.') != email.lastIndexOf('.'))) {
+                alert("Enter @ and . symbols only one time proper place");
+                document.getElementById('email').style.visibility = "visible";
+                document.getElementById('email').style.color = "red";
+                $(document).ready(function () {
+                    $("#femail").click(function () {
+                        $("#email").hide();
+                    });
+                });
+                count++;
+            }
+
+            if (email.slice(0, email.indexOf('@')).length > 14) {
+                alert("Enter starting 14 letter only");
+                document.getElementById('email').style.visibility = "visible";
+                document.getElementById('email').style.color = "red";
+                $(document).ready(function () {
+                    $("#femail").click(function () {
+                        $("#email").hide();
+                    });
+                });
+                count++;
+            }
+
+            if (count == 0) {
+                alert("Your Name is : " + name + "\n" + "Your EmailId is : " + email + "\n" + "Your Number is : " + number + "\n" + "Your requirement is : " + textarea);
+                alert("Form Submitted Successfully!");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

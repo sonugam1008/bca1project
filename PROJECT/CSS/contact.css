@@ -1,0 +1,13 @@
+.contact-content{
+    margin-top: 15px;
+}
+
+#resub {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer{
+    background-color: var(--main-bg-color);
+    margin-top: 45px;
+}

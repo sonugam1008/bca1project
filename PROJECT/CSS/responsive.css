@@ -1,0 +1,148 @@
+@media (max-width : 1140px) {
+    .banner-title {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width : 992px) {
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50.66666667%;
+    }
+
+    .lead {
+        width: 75%;
+    }
+}
+
+@media (max-width : 768px) {
+    #logo {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #menu {
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+
+    .banner-title {
+        padding-top: 0;
+    }
+
+    .banner-title h1 {
+        font-size: 1.7rem;
+    }
+
+    .section-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .testimonial {
+        margin-bottom: 10px;
+    }
+
+    .section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .news-content {
+        flex-direction: column;
+    }
+
+    .footer-widget {
+        margin-bottom: 20px;
+    }
+
+    .row-footer-sidebar {
+        flex-direction: column;
+    }
+
+    .footer-widget p {
+        width: 100%;
+    }
+
+    .footer-widget {
+        width: 100%;
+    }
+
+    .form-box input,
+    textarea {
+        height: 40%;
+        font-size: 12px;
+    }
+
+    .footer-md {
+        height: 89px !important;
+    }
+
+    .container .grid-4 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .followme-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-4-col h3 {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .grid-4-col address {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .bottom-footer {
+        margin-bottom: 15px;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+
+
+}
+
+@media (max-width : 540px) {
+    .lead {
+        width: 100%;
+    }
+
+    .news-post {
+        margin-left: 15px;
+    }
+
+    .row-footer {
+        text-align: center;
+    }
+
+    .post-img {
+        display: none;
+    }
+}

@@ -1,0 +1,224 @@
+.container {
+    position: relative;
+    z-index: 5;
+    max-width: 92rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.title:before {
+    content: attr(data-title);
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--main-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header .text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-body {
+    display: block;
+    text-align: start;
+}
+
+.btn {
+    display: inline-block;
+    padding: .85rem 2rem;
+    background-color: var(--main-color);
+    color: var(--light-one);
+    border-radius: 2rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s;
+    border-color: var(--main-color);
+}
+
+.btn:hover {
+    background-color: var(--light-one);
+    color: var(--main-color);
+    border-color: var(--main-color);
+    transform: translate(-5%, -5%);
+}
+
+.portfolio {
+    position: relative;
+    width: 100%;
+    background-color: var(--light-two);
+    min-height: 1200px;
+}
+
+.background-bg {
+    position: absolute;
+    width: 100%;
+    height: 520px;
+    top: 14%;
+    left: 0;
+    background-color: var(--main-color);
+    /* background-color: var(--main-bg-color); */
+}
+
+#portfolio .title,
+#portfolio .title:before {
+    color: var(--light-one);
+}
+
+#portfolio .title:after {
+    background-color: var(--light-one);
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    margin: 2.8rem 0;
+    grid-template-columns: repeat(3, 1fr);
+    /* it will be divide the images proper width like 100 / 3 = 33.33% */
+}
+
+.grid-item {
+    /* width: 33.33%; */
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    height: 330px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.gallery-image img {
+    position: absolute;
+    height: 115%;
+    /* width: initial; */
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    transition: 0.5s;
+}
+
+.gallery-image .img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* it will work only positioned elements. it shows the overlapping of the element*/
+    color: var(--light-one);
+    background-color: rgba(120, 76, 251, 0.55);
+    /* after hovering color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem 3.2rem;
+    opacity: 0;
+    /* currenlty it will be hide */
+    transition: 0.5s;
+}
+
+.img-overlay .plus {
+    position: relative;
+    margin: auto 0;
+}
+
+.plus:before,
+.plus:after {
+    content: "";
+    position: absolute;
+    width: 4.5rem;
+    height: 3px;
+    top: 50%;
+    letter-spacing: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--light-one);
+    border-radius: 3px;
+}
+
+.plus:before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    /* position absolute this reason plus sign will be hide then it will be show attached or plus then we apply the rotate -90deg it will be take position -90deg */
+}
+
+.img-description {
+    width: 100%;
+}
+
+.img-overlay h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.img-overlay h5 {
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.gallery-image:hover .img-overlay {
+    opacity: 1;
+}
+
+.gallery-image:hover img {
+    transform: translate(-50%, -50%) scale(1.1);
+    /* inside image will be translate after applying this property */
+}
+
+.more-folio {
+    display: flex;
+    justify-content: center;
+}
+
+div a{
+    color: white;
+}
